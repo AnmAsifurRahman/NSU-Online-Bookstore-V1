@@ -1,11 +1,11 @@
 <?php
 $username = $_POST['username'];
 $email = $_POST['email'];
-$id = $_POST['id'];
-$password = $_POST['pass1'];
+$nsu_id = $_POST['nsu_id'];
+$password = $_POST['password'];
 //$param_password = password_hash($password, PASSWORD_DEFAULT);
 
-if( !empty($username) || !empty($email) ||!empty($id) || !empty($password))
+if( !empty($username) ||!empty($email) ||!empty($nsu_id) ||!empty($password))
 {
     $host = "localhost";
     $dbUsername = "root";
@@ -25,7 +25,7 @@ if( !empty($username) || !empty($email) ||!empty($id) || !empty($password))
     	//$SELECT = "SELECT email from user_info where email = ? Limit 1";
         $SELECT= "SELECT username from user_info where username = ? Limit 1";
         $password = password_hash($password, PASSWORD_DEFAULT);
-    	$INSERT = "INSERT into user_info (username,  email,id, pass1) values(?, ?, ?, ?)";
+    	$INSERT = "INSERT into user_info (username, email, nsu_id, password) values(?, ?, ?, ?)";
 
     	/*$stmt = $conn->prepare($SELECT);
     	$stmt->bind_param("s", $email);
@@ -45,12 +45,12 @@ if( !empty($username) || !empty($email) ||!empty($id) || !empty($password))
     	{
     		$stmt->close();
     		$stmt = $conn->prepare($INSERT);
-    		$stmt->bind_param("ssssissssiss", $username,  $email,$id ,$password);
+    		$stmt->bind_param("ssis", $username, $email, $nsu_id, $password);
 
            // $param_username = $username;
 
     		$stmt-> execute();
-    		header('Location: first.html');
+    		header('Location: first.php');
     		//echo "New Record inserted successfully";
 
     	}

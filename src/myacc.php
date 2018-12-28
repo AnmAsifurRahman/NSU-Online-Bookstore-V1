@@ -36,7 +36,7 @@
          <li class="nav-item active">
            <a class="nav-link" href="myacc.html">My Account</a>
          </li>
-        
+
        </ul>
       </div>
     </div>
@@ -44,7 +44,9 @@
 
 
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/>
+<?php echo $username ?>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
   <!-- Footer -->

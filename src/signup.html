@@ -24,18 +24,7 @@
      <div id="navbarNav" class="collapse navbar-collapse">
        <ul class="navbar-nav ml-auto">
          <li class="nav-item">
-           <a class="nav-link" href="index.html">Home</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="about.html">About Us</a>
-         </li>
 
-         <li class="nav-item">
-           <a class="nav-link" href="contact.html">Contact</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="myacc.html">My Account</a>
-         </li>
          <li class="nav-item active">
            <a class="nav-link" href="signups.html">SignUp</a>
          </li>
@@ -96,26 +85,24 @@
                   <div class="card-body">
                     <h3>Sign Up Today</h3>
                     <p>Please fill up this form to register</p>
-                    <form>
+                    <form method="POST" action="signupForm.php">
                       <div class="form-group">
-                        <input type="text" placeholder="Username" name="username" class="form-control form-control-lg">
+                        <input type="text" placeholder="Username" name="username" required pattern="[A-Za-z0-9]+" title="Please enter valid username[A to z or 0-9]." class="form-control form-control-lg">
                       </div>
                       <div class="form-group">
                         <input type="email" placeholder="Email" name="email" class="form-control form-control-lg">
                       </div>
                       <div class="form-group">
                         <div class="form-group">
-                          <input type="text" placeholder="NSU ID(For Only NSUers)" name="ID" class="form-control form-control-lg">
+                          <input type="text" placeholder="NSU ID(For Only NSUers)" name="nsu_id" required pattern="[0-9]+" title="Please enter valid ID [0 to 9]." class="form-control form-control-lg">
                         </div>
 
                         <div class="form-group">
-                        <input type="password" name="pass1" placeholder="Password" class="form-control form-control-lg">
-                      </div>
-                      <div class="form-group">
-                        <input type="password" name="pass2" placeholder="Confirm Password" class="form-control form-control-lg">
+                        <input type="password" name="password" placeholder="Password" class="form-control form-control-lg">
                       </div>
 
-                      <input type="submit" class="btn btn-outline-light btn-block" value="Submit">
+
+                      <input type="submit" class="btn btn-outline-light btn-block" value="submit"> <a href="first.php">Send</a>
                     </br>
                       <p>Or Sign up by using Face Book.....</p>
                     </form>
